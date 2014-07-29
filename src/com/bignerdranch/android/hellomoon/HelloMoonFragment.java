@@ -13,6 +13,13 @@ public class HelloMoonFragment extends Fragment
 	private Button mPauseButton;
 	
 	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true);
+	}
+	
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanceState)
 	{
