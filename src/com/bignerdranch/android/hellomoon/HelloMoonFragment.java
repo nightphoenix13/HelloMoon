@@ -7,7 +7,7 @@ import android.widget.*;
 
 public class HelloMoonFragment extends Fragment
 {
-	private AudioPlayer mPlayer;
+	private AudioPlayer mPlayer = new AudioPlayer();
 	private Button mPlayButton;
 	private Button mStopButton;
 	private Button mPauseButton;
@@ -36,6 +36,7 @@ public class HelloMoonFragment extends Fragment
 			public void onClick(View v)
 			{
 				mPlayer.stop();
+				mPauseButton.setEnabled(false);
 			}
 		});
 		
@@ -45,7 +46,7 @@ public class HelloMoonFragment extends Fragment
 			@Override
 			public void onClick(View v)
 			{
-				
+				mPlayer.pause();
 			}
 		});
 		
